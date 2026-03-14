@@ -5,5 +5,11 @@
   "time": "30",
   "backend": {
     "imageid": "ubuntu"
+  },
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh"
+    }
   }
 }
