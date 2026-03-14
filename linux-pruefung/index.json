@@ -10,6 +10,48 @@
     "intro": {
       "text": "intro.md",
       "background": "background.sh"
-    }
+    },
+    "steps": [
+      {
+        "title": "Flag 1 - Kommandozeile Basics",
+        "text": "step1.md",
+        "verify": "verify1.sh"
+      },
+      {
+        "title": "Flag 2 - Navigation",
+        "text": "step2.md",
+        "verify": "verify2.sh"
+      },
+      {
+        "title": "Flag 3 - Dateien verwalten",
+        "text": "step3.md",
+        "verify": "verify3.sh"
+      },
+      {
+        "title": "Flag 4 - Paketverwaltung",
+        "text": "step4.md",
+        "verify": "verify4.sh"
+      },
+      {
+        "title": "Flag 5 - Pfadangaben",
+        "text": "step5.md",
+        "verify": "verify5.sh"
+      },
+      {
+        "title": "Flag 6 - Jokerzeichen",
+        "text": "step6.md",
+        "verify": "verify6.sh"
+      },
+      {
+        "title": "Flag 7 - Suchen und Finden",
+        "text": "step7.md",
+        "verify": "verify7.sh"
+      },
+      {
+        "title": "Flag 8 - Pipes und Umleitungen",
+        "text": "step8.md",
+        "verify": "verify8.sh"
+      }
+    ]
   }
 }
