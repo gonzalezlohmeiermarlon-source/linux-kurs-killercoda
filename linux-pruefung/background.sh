@@ -1,75 +1,43 @@
-# Linux Kurs - Finale Prüfung 🏆
+#!/bin/bash
 
-Willkommen zur finalen Prüfung des Linux Kurses!
+# Flag 1 - Versteckte Datei im Home-Verzeichnis
+echo "FLAG{kommandozeile_gemeistert}" > /root/.flag1.txt
 
-Deine Aufgabe ist es alle **8 versteckten Flags** auf diesem System zu finden.
+# Flag 2 - In /etc
+echo "FLAG{navigation_kein_problem}" > /etc/flag2.txt
 
-Flags haben immer dieses Format: `FLAG{...}`
+# Flag 3 - Größte Datei in /tmp/challenge
+mkdir -p /tmp/challenge
+echo "ablenkung1" > /tmp/challenge/datei1.txt
+echo "ablenkung2" > /tmp/challenge/datei2.txt
+echo "ablenkung3" > /tmp/challenge/datei3.txt
+# Größte Datei mit der Flag
+python3 -c "print('FLAG{dateien_verwalten_easy}' + 'x' * 500)" > /tmp/challenge/gross.txt
 
----
+# Flag 4 - Paketverwaltung
+mkdir -p /opt
+BASH_VERSION_OUTPUT=$(bash --version | head -1)
+echo "FLAG{apt_und_bash_version_gefunden}" > /opt/flag4.txt
 
-## Flag 1 - Kommandozeile Basics
-Finde heraus welcher Benutzer angemeldet ist.
-Die Flag liegt in deinem Home-Verzeichnis in einer versteckten Datei.
+# Flag 5 - Pfadangaben (/tmp/flag5.txt)
+echo "FLAG{relative_pfade_verstanden}" > /tmp/flag5.txt
 
-> Hinweis: `ls -la` zeigt auch versteckte Dateien an
+# Flag 6 - Jokerzeichen (/opt/flags/)
+mkdir -p /opt/flags
+echo "FLAG{wildcards_sind_praktisch}" > /opt/flags/flag_eins.txt
+echo "FLAG{jokerzeichen_gemeistert}" > /opt/flags/flag_zwei.txt
+echo "ich_bin_eine_ablenkung" > /opt/flags/fake1.log
+echo "ich_auch" > /opt/flags/fake2.dat
+echo "und_ich" > /opt/flags/fake3.csv
 
----
+# Flag 7 - Suchen und Finden
+mkdir -p /var/versteckt/tief/noch_tiefer
+echo "FLAG{find_befehl_beherrscht}" > /var/versteckt/tief/noch_tiefer/secret.txt
 
-## Flag 2 - Navigation
-Wechsle in das Verzeichnis `/etc` und lies den Inhalt der Datei `flag2.txt`.
+# Flag 8 - Pipes und Umleitungen
+echo "das ist eine normale log zeile" > /var/log/flag8.log
+echo "noch eine log zeile" >> /var/log/flag8.log
+echo "FLAG{pipes_und_grep_sitzen}" >> /var/log/flag8.log
+echo "und noch eine zeile zur ablenkung" >> /var/log/flag8.log
 
-> Hinweis: `cd` und `cat`
-
----
-
-## Flag 3 - Dateien verwalten
-Im Verzeichnis `/tmp/challenge` befinden sich mehrere Dateien.
-Finde die größte Datei - dort liegt die Flag.
-
-> Hinweis: `ls -lh` zeigt die Dateigröße an
-
----
-
-## Flag 4 - Paketverwaltung
-Finde heraus welche Version von `bash` installiert ist.
-Die Flag liegt in `/opt/flag4.txt` und enthält die Versionsnummer.
-
-> Hinweis: `bash --version` und dann `cat /opt/flag4.txt`
-
----
-
-## Flag 5 - Pfadangaben
-Du befindest dich in `/home/user/`. Die Flag liegt in `../../tmp/flag5.txt`.
-Gib den Inhalt aus **ohne einen absoluten Pfad** zu verwenden!
-
-> Hinweis: Relative Pfade mit `..`
-
----
-
-## Flag 6 - Jokerzeichen
-Im Verzeichnis `/opt/flags` liegen viele Dateien.
-Nur die Dateien die mit `flag` beginnen und auf `.txt` enden enthalten echte Flags!
-
-> Hinweis: `cat /opt/flags/flag*.txt`
-
----
-
-## Flag 7 - Suchen und Finden
-Irgendwo unter `/var` versteckt sich eine Datei namens `secret.txt`.
-Finde sie und lies den Inhalt!
-
-> Hinweis: `find /var -name secret.txt`
-
----
-
-## Flag 8 - Pipes und Umleitungen
-Die letzte Flag steckt in `/var/log/flag8.log`.
-Suche dort nach der Zeile die das Wort `FLAG` enthält!
-
-> Hinweis: `cat /var/log/flag8.log | grep FLAG`
-
----
-
-Viel Erfolg! 💪
-
+echo "Setup abgeschlossen! Viel Erfolg bei der Prüfung!"
