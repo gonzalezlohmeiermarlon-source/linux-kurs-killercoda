@@ -1,1 +1,9 @@
-
+{
+  "title": "Linux Pruefung",
+  "description": "Teste dein Wissen aus dem Linux Kurs! Finde alle 8 versteckten Flags um den Kurs zu bestehen.",
+  "difficulty": "beginner",
+  "time": "30",
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
